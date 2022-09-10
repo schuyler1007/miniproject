@@ -1,0 +1,5 @@
+Framework Engine: Android App
+Application Framework: REACT
+Twitter Resource: 
+Cloud Environment: AWS
+Developing Framework: Google Firebase
