@@ -1,9 +1,11 @@
 from cmath import log
 import logging
 import tweepy
+import sys
+import os
 
-CONSUMER_KEY = ''
-CONSUMER_SECRET = ''
+CONSUMER_KEY = os.environ.get('TWITTER_API_KEY')
+CONSUMER_SECRET = os.environ.get('TWITTER_API_SECRET')
 OAUTH_TOKEN = ''
 OAUTH_TOKEN_SECRET = ''
 
@@ -20,3 +22,7 @@ def main(args):
     api = tweepy.API(auth)
 
     tweets = api.user_timeline(args[0])
+
+
+if __name__ == '__main__':
+    main(sys.argv[1])
