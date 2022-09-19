@@ -1,3 +1,4 @@
+
 package com.google.firebase.quickstart.auth;
 
 import android.content.Intent;
