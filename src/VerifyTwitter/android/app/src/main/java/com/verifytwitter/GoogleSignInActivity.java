@@ -15,7 +15,6 @@
  */
 
 package com.google.firebase.quickstart.auth;
-package com.verifytwitter;
 
 import android.app.Activity;
 import android.content.Intent;
