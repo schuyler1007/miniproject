@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "766770531670",
+    "project_id": "miniproject-83cf4",
+    "storage_bucket": "miniproject-83cf4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766770531670:android:fae2a1cd0097ca10cb1af7",
+        "android_client_info": {
+          "package_name": "com.verifytwitter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "766770531670-te2aft1gkplc6fcscvicqt8gru8u9796.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSPF0UnatNivJhN3qyGz_4oODkbmvg7JE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "766770531670-te2aft1gkplc6fcscvicqt8gru8u9796.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
