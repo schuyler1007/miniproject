@@ -257,6 +257,7 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-auth:7.2.0'  //changed - adds Google login
     // Also add the dependency for the Google Play services library and specify its version
     implementation 'com.google.android.gms:play-services-auth:20.3.0'   //changed
+    implementation 'com.google.firebase:firebase-analytics'
 
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
