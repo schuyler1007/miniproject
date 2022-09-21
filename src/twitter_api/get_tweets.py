@@ -4,15 +4,15 @@ import tweepy
 import sys
 import os
 
-CONSUMER_KEY = os.environ.get('TWITTER_API_KEY')
-CONSUMER_SECRET = os.environ.get('TWITTER_API_SECRET')
+CONSUMER_KEY = ''
+CONSUMER_SECRET = ''
 OAUTH_TOKEN = ''
 OAUTH_TOKEN_SECRET = ''
 
 Logger = None
-batch_size = 100
+batch_size = 20
 
-def main(args):
+def main():
     global Logger
     logging.basicConfig(level=logging.WARN)
     Logger = logging.getLogger('get_tweets_by_id')
@@ -21,8 +21,18 @@ def main(args):
     auth.set_access_token(OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
     api = tweepy.API(auth)
 
-    tweets = api.user_timeline(args[0])
+    # try:
+    #     api.verify_credentials()
+    #     print('Successful Authentication')
+    # except:
+    #     print('Failed authentication')
+
+    test_name = "elonmusk"
+    tweets = api.user_timeline(screen_name = test_name, count=batch_size)
+    for tweet in tweets:
+        print(tweet.text, end = "\n\n")
+
 
 
 if __name__ == '__main__':
-    main(sys.argv[1])
+    main()
