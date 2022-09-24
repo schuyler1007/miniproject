@@ -79,6 +79,11 @@ import org.apache.tools.ant.taskdefs.condition.Os
  * ]
  */
 
+//changed
+task wrapper(type: Wrapper){
+    gradleVersion = '7.2'
+}
+
 project.ext.react = [
     enableHermes: true,  // clean and rebuild if changing
 ]
@@ -251,6 +256,13 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:30.4.1')  //changed - including BOM
+    implementation 'com.firebaseui:firebase-ui-auth:7.2.0'  //changed - adds Google login
+    // Also add the dependency for the Google Play services library and specify its version
+    implementation 'com.google.android.gms:play-services-auth:20.3.0'   //changed
+    implementation 'com.google.firebase:firebase-analytics'
 
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
